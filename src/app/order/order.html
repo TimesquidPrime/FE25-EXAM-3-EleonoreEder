@@ -1,12 +1,18 @@
 <div class="container mx-auto mt-5">
+  <h1 class="display-3 py-3 m-3">My cart</h1>
   <div class="row m-3">
-    <h1 class="display-3 py-3">My cart</h1>
-
-    <div class="card col-7 me-3 pt-3p-0">
+    <div class="card col col-12 col-md-7 me-3 mb-3 p-0">
       <div class="card-header"><strong>Items</strong></div>
       <div class="card-body">
         @if (cart.length > 0){ @for (item of cart; track item.id){
         <div class="d-flex">
+          <img
+            [src]="'images/' + item.image"
+            alt="icon"
+            width="100"
+            height="auto"
+            class="me-3"
+          />
           <p class="me-auto">{{item.name}}</p>
           <p class="pe-2">{{item.quantity}} x</p>
           <p>{{item.price}}€</p>
@@ -22,7 +28,7 @@
       </div>
     </div>
 
-    <div class="card col-3 p-0">
+    <div class="card col col-12 col-md-4 mb-3 p-0">
       <div class="card-header"><strong>Summary</strong></div>
       <div class="card-body">
         <div class="d-flex">
