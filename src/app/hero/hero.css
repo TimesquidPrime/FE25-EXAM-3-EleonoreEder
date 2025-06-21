@@ -1,0 +1,9 @@
+.carousel-content {
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  z-index: 20;
+  color: white;
+  background-color: rgb(13, 39, 59, 0.5);
+  padding: 1.5rem;
+}

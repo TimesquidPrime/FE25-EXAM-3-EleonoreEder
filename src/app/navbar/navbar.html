@@ -1,0 +1,62 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top"
+  style="background-color: rgb(13, 39, 59)"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="/images/store_icon.png" alt="icon" width="30" height="30" />
+    </a>
+    <a class="navbar-brand text-white" routerLink="/">Famazon</a>
+    <button
+      class="navbar-toggler"
+      data-bs-theme="dark"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      style="background-color: rgb(13, 39, 59); padding: 10px"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-white"
+            aria-current="page"
+            routerLink="/product-list"
+            >Products</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active text-white"
+            aria-current="page"
+            routerLink="/about"
+            >About us</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light me-3" type="submit">Search</button>
+        <a
+          class="btn btn-danger text-white"
+          aria-current="page"
+          routerLink="/order"
+          >Cart</a
+        >
+      </form>
+    </div>
+  </div>
+</nav>

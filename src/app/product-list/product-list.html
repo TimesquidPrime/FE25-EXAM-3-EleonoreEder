@@ -1,0 +1,40 @@
+<div class="container mx-auto mt-5">
+  <div class="m-2">
+    <h1 class="display-3 py-3">Our Products</h1>
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
+      @for ( val of products; track val.id){
+      <div class="mb-3">
+        <div class="card" style="width: 18rem">
+          <img
+            [src]="'images/' + val.image"
+            class="card-img-top"
+            alt="{{val.name}}"
+          />
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5 class="card-title">{{val.name}}</h5>
+                <p class="card-text">{{val.price}}€</p>
+              </li>
+              @if (val.availability) {
+              <li class="list-group-item my-2">
+                <a
+                  [routerLink]="'/details/' + val.id"
+                  class="btn btn-primary me-2"
+                  >Details</a
+                >
+                <button class="btn btn-danger" (click)="addToCart(val)">
+                  Order
+                </button>
+              </li>
+              } @else {
+              <p class="m-3 text-danger">Currently unavailable</p>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

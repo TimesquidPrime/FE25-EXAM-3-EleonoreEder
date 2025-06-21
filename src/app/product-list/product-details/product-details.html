@@ -1,0 +1,18 @@
+<div class="container mx-auto mt-5">
+  <div class="m-3 py-3">
+    <div class="card mt-5" style="width: 80%">
+      <img
+        [src]="'images/' + product?.image"
+        class="card-img-top"
+        alt="{{product?.name}}"
+      />
+      <div class="card-body">
+        <h5 class="display-6 card-title">{{product?.name}}</h5>
+        s
+        <p class="card-text">{{product?.price}}€</p>
+        <p class="card-text">{{product?.description}}</p>
+        <button class="btn btn-danger" (click)="addToCart()">Order</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container mx-auto mt-5">
+  <div class="row m-3">
+    <h1 class="display-3 py-3">My cart</h1>
+
+    <div class="card col-7 me-3 pt-3p-0">
+      <div class="card-header"><strong>Items</strong></div>
+      <div class="card-body">
+        @if (cart.length > 0){ @for (item of cart; track item.id){
+        <div class="d-flex">
+          <p class="me-auto">{{item.name}}</p>
+          <p class="pe-2">{{item.quantity}} x</p>
+          <p>{{item.price}}€</p>
+        </div>
+        <hr />
+        } } @else {
+        <p>Your cart is empty</p>
+        }
+        <div class="d-flex justify-content-between">
+          <p><strong>Subtotal: </strong></p>
+          <p><strong>{{subtotal}}€</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-3 p-0">
+      <div class="card-header"><strong>Summary</strong></div>
+      <div class="card-body">
+        <div class="d-flex">
+          <p class="me-auto">Items</p>
+          <p>{{subtotal}}€</p>
+        </div>
+        <div class="d-flex">
+          <p class="me-auto">Service fee</p>
+          <p>{{serviceFee}}€</p>
+        </div>
+        <div class="d-flex">
+          <p class="me-auto">Discount</p>
+          <p>{{discount}}€</p>
+        </div>
+        <hr />
+        <div class="d-flex">
+          <p class="me-auto"><strong>Total</strong></p>
+          <p><strong>{{total}}€</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
