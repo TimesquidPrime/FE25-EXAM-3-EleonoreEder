@@ -36,13 +36,16 @@
           <p>{{subtotal}}€</p>
         </div>
         <div class="d-flex">
-          <p class="me-auto">Service fee</p>
+          <p class="me-auto">10% Service fee</p>
           <p>{{serviceFee}}€</p>
         </div>
+        @if (subtotal > 40){
         <div class="d-flex">
-          <p class="me-auto">Discount</p>
+          <p class="me-auto">15% Discount</p>
           <p>{{discount}}€</p>
         </div>
+        }
+
         <hr />
         <div class="d-flex">
           <p class="me-auto"><strong>Total</strong></p>
